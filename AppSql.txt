@@ -1,0 +1,132 @@
+/*CREATE DATABASE DM;*/
+/*USE DM;*/
+/* Eu tive que executar o codigo de alter table pois as chaves nao ficaram UI
+ALTER TABLE materiasacursar MODIFY COLUMN materiasacursar_id INT AUTO_INCREMENT;
+ALTER TABLE materiascursadas MODIFY COLUMN materiascursadas_id INT AUTO_INCREMENT;*/
+/*CREATE TABLE usuarios (
+		usuarios_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+		nome VARCHAR(255) UNIQUE,
+		senha VARCHAR(255),
+		email VARCHAR(255))
+		ENGINE = InnoDB;
+		-- outros campos do usuário
+
+
+	CREATE TABLE Materias (
+		materias_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+		nomeMaterias VARCHAR(255)
+        carga_horaria INT)
+		ENGINE = InnoDB;
+		
+	CREATE TABLE MatériasCursadas (
+		MatériasCursadas_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+		usuarios_id INT,
+		Materias_id INT,
+		FOREIGN KEY (usuarios_id) REFERENCES usuarios(usuarios_id),
+		FOREIGN KEY (Materias_id) REFERENCES Materias(Materias_id))
+		ENGINE = InnoDB;
+
+	CREATE TABLE MatériasAcursar  (
+	   MatériasAcursar_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+		usuarios_id INT,
+		Materias_id INT,
+		FOREIGN KEY (usuarios_id) REFERENCES usuarios(usuarios_id),
+		FOREIGN KEY (Materias_id) REFERENCES Materias(Materias_id))
+		ENGINE = InnoDB;*/
+        
+/*INSERT INTO usuarios(usuarios_id, nome , senha, email) VALUES ( '1', 'kelvimsilva', '123','kelvim44@gmail');*/
+/*INSERT INTO materias(idMaterias, Acursar,Login_idLogin) VALUES (4, 'IA' , 4);*/
+/*CREATE DATABASE DM;*/
+/*USE DM;*/
+/*RENAME TABLE matériascursadas TO materiascursadas;*/
+/*ALTER TABLE Materias ADD COLUMN carga_horaria INT;*/
+/*INSERT INTO Materias (nomeMaterias, carga_horaria) VALUES
+    ('Matemática', 60),
+    ('Física', 75),
+    ('Química', 45),
+    ('História', 30),
+    ('Geografia', 50),
+    ('Biologia', 45),
+    ('Inglês', 30),
+    ('Programação', 75),
+    ('Economia', 45),
+    ('Artes', 30);*/
+/*INSERT INTO Materias (nomeMaterias) VALUES
+    ('Matemática'), x
+    ('Física'), 
+    ('Química'),  x
+    ('História'),
+    ('Geografia'), x
+    ('Biologia'),
+    ('Inglês'),
+    ('Programação'), x
+    ('Economia'),
+    ('Artes');*/
+   /*INSERT INTO materiasacursar (usuarios_id, materias_id) VALUES
+    (4, 72),
+    (4, 73), 
+    (4, 74),
+    (4, 75), 
+    (4, 76),
+    (4, 77), 
+    (4, 78), 
+    (4, 79),
+    (4 , 80),
+    (4, 81);*/
+    /*INSERT INTO matériascursadas (usuarios_id, materias_id) VALUES
+    (4, 1),
+    (4, 3), 
+    (4, 5),
+    (4, 8),
+    (1, 6),
+    (1, 7), 
+    (1, 9), 
+    (1, 10),
+    (4 , 2),
+    (1, 4);*/
+    
+/*USE DM;*/
+/*SELECT * FROM materias;*/
+/*SELECT * FROM Materiasacursar WHERE usuarios_id;*/
+/*SELECT materiasacursar_id, COUNT(*) as count
+FROM materiasacursar
+GROUP BY materiasacursar_id
+HAVING count > 1;*/
+/*SHOW COLUMNS FROM materiasacursar LIKE 'materiasacursar_id';*/
+/*ALTER TABLE materiasacursar MODIFY COLUMN materiasacursar_id INT AUTO_INCREMENT;*/
+/*SELECT materiascursadas.*, Materias.nomeMaterias AS nomeMaterias, Materias.carga_horaria
+FROM Materiascursadas
+JOIN Materias ON Materiascursadas.materias_id = Materias.materias_id;*/
+
+/*SELECT materiasacursar.*, Materias.nomeMaterias AS nomeMaterias, Materias.carga_horaria 
+FROM Materiasacursar 
+JOIN Materias ON Materiasacursar.materias_id = Materias.materias_id;*/
+
+/*ALTER TABLE materiascursadas CHANGE COLUMN matériascursadas_id materiascursadas_id int;*/
+/*ALTER TABLE usuarios ADD usuarios VARCHAR(45) NULL;*/
+
+/*INSERT INTO materias (nomeMaterias, carga_horaria) VALUES
+('Cálculo Avançado', 60),
+('Eletromagnetismo', 45),
+('Teoria da Computação', 60),
+('Direito Constitucional', 30),
+('Engenharia de Software', 75),
+('Bioquímica Avançada', 60),
+('Economia Internacional', 45),
+('Psicologia Organizacional', 30),
+('Métodos Numéricos', 60),
+('Sistemas Distribuídos', 75);
+select * from materias;*/
+
+/*DELETE FROM materiasacursar WHERE Materias_id BETWEEN 31 AND 68;
+DELETE FROM materias WHERE materias_id BETWEEN 31 AND 68;*/
+/*SELECT
+    materiasacursar.*,
+    Materias.nomeMaterias AS nomeMaterias,
+    Materias.carga_horaria
+FROM
+    Materiasacursar
+JOIN
+    Materias ON Materiasacursar.materias_id = Materias.materias_id
+JOIN
+    Usuarios ON Materiasacursar.usuarios_id = Usuarios.usuarios_id;*/
